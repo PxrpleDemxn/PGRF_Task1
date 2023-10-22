@@ -11,7 +11,7 @@ C - mazání plátna
 A - Polygon
 
 
-Shift - Změna na vertikální nebo horizontální alignment
+Shift - Při držení se změní alignment
 
 
 O a P - změna vzdálenosti teček
