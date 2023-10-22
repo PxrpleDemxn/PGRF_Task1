@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="983aaee0-945d-486e-afc3-5fc4124de7b0" name="Changes" comment="Finished with saving and comments">
+    <list default="true" id="983aaee0-945d-486e-afc3-5fc4124de7b0" name="Changes" comment="Fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rasterize/LineRasterizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rasterize/LineRasterizer.java" afterDir="false" />
@@ -24,6 +24,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -36,6 +37,9 @@
         <option name="url" value="https://github.com/PxrpleDemxn/PGRF_Task1.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -90,7 +94,7 @@
       <workItem from="1697976874541" duration="1514000" />
       <workItem from="1697978408085" duration="6197000" />
       <workItem from="1697988678649" duration="2021000" />
-      <workItem from="1697990733543" duration="1501000" />
+      <workItem from="1697990733543" duration="1704000" />
     </task>
     <task id="LOCAL-00001" summary="Finished?">
       <option name="closed" value="true" />
@@ -108,7 +112,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697982745673</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fix">
+      <option name="closed" value="true" />
+      <created>1697992305237</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697992305237</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,6 +140,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished?" />
     <MESSAGE value="Finished with saving and comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished with saving and comments" />
+    <MESSAGE value="Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix" />
   </component>
 </project>

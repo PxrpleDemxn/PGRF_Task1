@@ -16,8 +16,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
-import static java.lang.Math.abs;
-
 
 public class App {
     //region VARIABLES
@@ -32,7 +30,6 @@ public class App {
     Polygon polygon = new Polygon();
     private int selection = 1;
     private int dotSpacing = 5;
-    private boolean isHorizontal = true;
     private boolean allowAlignment = false;
     private final SaveImageService saveImageService = new SaveImageService();
     //endregion
@@ -51,8 +48,6 @@ public class App {
         polygonRasterizer = new PolygonRasterizer(lineRasterizer);
 
         canvas = new JPanel() {
-            private static final long serialVersionUID = 1L;
-
             @Override
             public void paintComponent(Graphics g) {
                 super.paintComponent(g);

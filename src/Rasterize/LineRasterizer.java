@@ -3,8 +3,6 @@ package Rasterize;
 import Model.Line;
 import Services.Interface.IRBIService;
 
-import java.awt.*;
-
 public abstract class LineRasterizer {
     protected IRBIService RBIRaster;
 
