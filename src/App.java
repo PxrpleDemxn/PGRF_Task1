@@ -16,6 +16,8 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+import static java.lang.Math.abs;
+
 
 public class App {
     //region VARIABLES
@@ -82,7 +84,6 @@ public class App {
                     allowAlignment = false;
                 } else if (e.getKeyCode() == KeyEvent.VK_SHIFT) {
                     allowAlignment = true;
-                    isHorizontal = !isHorizontal;
                 } else if (e.getKeyCode() == KeyEvent.VK_S) {
                     saveImageService.saveImage(RBIRaster);
                 }
@@ -95,6 +96,16 @@ public class App {
                 }
             }
         });
+
+        canvas.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                if (e.getKeyCode() == KeyEvent.VK_SHIFT) {
+                    allowAlignment = false;
+                }
+            }
+        });
+
         canvas.addMouseListener(new MouseAdapter() {
             @Override
             public void mousePressed(MouseEvent e) {
@@ -102,6 +113,7 @@ public class App {
                     startPoint = new Point(e.getX(), e.getY());
                     currentPoint = startPoint;
                 } else if (selection == 3) {
+                    clear(0x000000);
                     Point point = new Point(e.getX(), e.getY());
                     polygon.addPoint(point);
                     polygonRasterizer.rasterize(polygon);
@@ -114,21 +126,36 @@ public class App {
             @Override
             public void mouseDragged(MouseEvent e) {
                 if (selection == 1 || selection == 2) {
+
                     clear(0x000000);
                     currentPoint = new Point(e.getX(), e.getY());
-                    Line line = new Line(startPoint, currentPoint, 0xff0000);
-                    if (selection == 1) {
-                        if (allowAlignment) {
-                            lineRasterizer.rasterize(line, isHorizontal);
-                        } else lineRasterizer.rasterize(line);
-                    }
+                    if (allowAlignment) {
+                        if (calculateK() > 1) {
+                            Line line = new Line(startPoint.x, startPoint.y, startPoint.x, currentPoint.y, 0xff0000);
+                            if (selection == 1) {
+                                lineRasterizer.rasterize(line);
+                            } else lineRasterizerDotted.rasterize(line, dotSpacing);
 
 
-                    if (selection == 2) {
-                        if (allowAlignment) {
-                            lineRasterizerDotted.rasterize(line, dotSpacing, isHorizontal);
-                        } else lineRasterizerDotted.rasterize(line, dotSpacing);
+                        } else {
+                            Line line = new Line(startPoint.x, startPoint.y, currentPoint.x, startPoint.y, 0xff0000);
+                            if (selection == 1) {
+                                lineRasterizer.rasterize(line);
+                            } else lineRasterizerDotted.rasterize(line, dotSpacing);
+                        }
+                    } else {
+                        Line line = new Line(startPoint, currentPoint, 0xff0000);
+                        if (selection == 1) {
+                            lineRasterizer.rasterize(line);
+                        }
+
+
+                        if (selection == 2) {
+                            lineRasterizerDotted.rasterize(line, dotSpacing);
+                        }
+
                     }
+
 
                     canvas.repaint();
                 }
@@ -140,6 +167,10 @@ public class App {
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> new App(800, 600).start());
 
+    }
+
+    private float calculateK() {
+        return Math.abs((float) (currentPoint.y - startPoint.y) / (currentPoint.x - startPoint.x));
     }
 
     public void clear(int color) {

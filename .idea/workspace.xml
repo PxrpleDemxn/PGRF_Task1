@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="983aaee0-945d-486e-afc3-5fc4124de7b0" name="Changes" comment="Finished?">
-      <change afterPath="$PROJECT_DIR$/src/Services/SaveImageService.java" afterDir="false" />
+    <list default="true" id="983aaee0-945d-486e-afc3-5fc4124de7b0" name="Changes" comment="Finished with saving and comments">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Polygon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Model/Polygon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Rasterize/LineRasterizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rasterize/LineRasterizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rasterize/LineRasterizerDotted.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rasterize/LineRasterizerDotted.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rasterize/PolygonRasterizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rasterize/PolygonRasterizer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rasterize/Trivial/LineRasterizerDottedTrivial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rasterize/Trivial/LineRasterizerDottedTrivial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rasterize/Trivial/LineRasterizerTrivial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rasterize/Trivial/LineRasterizerTrivial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/Interface/IRBIService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Services/Interface/IRBIService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,12 +25,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "PxrpleDemxn"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -57,23 +48,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="App-Start" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="App" />
@@ -97,7 +88,9 @@
       <workItem from="1697965241566" duration="1851000" />
       <workItem from="1697970243360" duration="158000" />
       <workItem from="1697976874541" duration="1514000" />
-      <workItem from="1697978408085" duration="4036000" />
+      <workItem from="1697978408085" duration="6197000" />
+      <workItem from="1697988678649" duration="2021000" />
+      <workItem from="1697990733543" duration="1501000" />
     </task>
     <task id="LOCAL-00001" summary="Finished?">
       <option name="closed" value="true" />
@@ -107,7 +100,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697980206510</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Finished with saving and comments">
+      <option name="closed" value="true" />
+      <created>1697982745673</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697982745673</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,6 +127,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Finished?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished?" />
+    <MESSAGE value="Finished with saving and comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished with saving and comments" />
   </component>
 </project>
