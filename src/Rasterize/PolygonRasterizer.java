@@ -12,6 +12,7 @@ public class PolygonRasterizer {
     }
 
     public void rasterize(Polygon polygon) {
+        // pokud jsou 3 body v listu tak se vykreslí čáry mezi sebou
         if (polygon.getPointsLength() < 3) return;
         for (int i = 0; i < polygon.getPointsLength(); i++) {
             int point1 = i;

@@ -13,10 +13,6 @@ public class Polygon {
         points.add(point);
     }
 
-    public ArrayList<Point> getPoints() {
-        return points;
-    }
-
     public int getPointsLength() {
         return points.size();
     }
@@ -24,8 +20,8 @@ public class Polygon {
     public Point getPoint(int point) {
         return points.get(point);
     }
-    public void clear()
-    {
+
+    public void clear() {
         points.clear();
     }
 }

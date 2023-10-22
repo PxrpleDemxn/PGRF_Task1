@@ -12,34 +12,36 @@ public class LineRasterizerTrivial extends LineRasterizer {
 
     @Override
     protected void drawLine(int x1, int y1, int x2, int y2) {
-        float k = (float)(y2-y1)/(x2-x1);
-        float q = y1-(k*x1);
-        if(abs((float)y2-y1) < abs((float) x2-x1))
-        {
-            if(x2<x1){
+        // výpočet sklonu
+        float k = (float) (y2 - y1) / (x2 - x1);
+        float q = y1 - (k * x1);
+        // prohození proměnných aby se čára případně nebugovala - X
+        if (abs((float) y2 - y1) < abs((float) x2 - x1)) {
+            if (x2 < x1) {
                 int tmp = x1;
                 x1 = x2;
-                x2 =tmp;
+                x2 = tmp;
             }
-            for(int x = x1; x<=x2;x++) {
-                int y = Math.round((k*x)+q);
-                RBIRaster.setPixel(x,y,0xffff00);
+            // provede vybarvení
+            for (int x = x1; x <= x2; x++) {
+                int y = Math.round((k * x) + q);
+                RBIRaster.setPixel(x, y, 0xffff00);
             }
-        }
-        else{
-            if(y2<y1){
+        } else {
+            // prohození proměnných aby se čára případně nebugovala - Y
+            if (y2 < y1) {
                 int tmp = y1;
                 y1 = y2;
                 y2 = tmp;
             }
+            // provede vybarvení
             for (int y = y1; y <= y2; y++) {
-                int x = Math.round((y-q)/k);
+                int x = Math.round((y - q) / k);
 
-                if(x2 == x1){
-                    RBIRaster.setPixel(x2,y,0xffff00);
-                }
-                else{
-                    RBIRaster.setPixel(x,y,0xffff00);
+                if (x2 == x1) {
+                    RBIRaster.setPixel(x2, y, 0xffff00);
+                } else {
+                    RBIRaster.setPixel(x, y, 0xffff00);
                 }
             }
         }

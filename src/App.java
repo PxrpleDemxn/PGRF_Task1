@@ -7,6 +7,7 @@ import Rasterize.PolygonRasterizer;
 import Rasterize.Trivial.LineRasterizerDottedTrivial;
 import Rasterize.Trivial.LineRasterizerTrivial;
 import Services.RBIService;
+import Services.SaveImageService;
 
 import javax.swing.*;
 import java.awt.*;
@@ -15,10 +16,10 @@ import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
+
 public class App {
     //region VARIABLES
     private final JPanel canvas;
-    private int x, y;
     private final RBIService RBIRaster;
     private final LineRasterizer lineRasterizer;
     private final LineRasterizerDotted lineRasterizerDotted;
@@ -31,6 +32,7 @@ public class App {
     private int dotSpacing = 5;
     private boolean isHorizontal = true;
     private boolean allowAlignment = false;
+    private final SaveImageService saveImageService = new SaveImageService();
     //endregion
 
     public App(int width, int height) {
@@ -81,6 +83,8 @@ public class App {
                 } else if (e.getKeyCode() == KeyEvent.VK_SHIFT) {
                     allowAlignment = true;
                     isHorizontal = !isHorizontal;
+                } else if (e.getKeyCode() == KeyEvent.VK_S) {
+                    saveImageService.saveImage(RBIRaster);
                 }
 
                 if (e.getKeyCode() == KeyEvent.VK_P) {
@@ -125,7 +129,6 @@ public class App {
                             lineRasterizerDotted.rasterize(line, dotSpacing, isHorizontal);
                         } else lineRasterizerDotted.rasterize(line, dotSpacing);
                     }
-
 
                     canvas.repaint();
                 }
